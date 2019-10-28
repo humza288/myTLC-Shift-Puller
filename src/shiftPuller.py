@@ -2,6 +2,7 @@ from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from getpass import getpass
 import time
+import os
 import datetime
 import calendar
 
@@ -13,7 +14,9 @@ class shiftPuller:
     def pullShifts(self):
         options = Options()
         options.headless = True
-        client = webdriver.Chrome('C:\\Users\\Humza\\Desktop\\myTLC_client\\chromedriver.exe',
+        dirname = os.path.dirname(__file__)
+        filename = os.path.join(dirname, 'chromedriver.exe')
+        client = webdriver.Chrome(filename,
                             chrome_options=options)
 
         print("FETCHING_TLC: ")
