@@ -48,16 +48,12 @@ def addShift(start, end):
             'dateTime': end,
             'timeZone': 'America/Los_Angeles',
         },
-        'recurrence': [
-            'RRULE:FREQ=DAILY;COUNT=1'
-        ],
         'attendees': [
             {'email': 'humza.munir@bestbuy.com'},
         ],
         'reminders': {
             'useDefault': False,
             'overrides': [
-                {'method': 'email', 'minutes': 24 * 60},
                 {'method': 'popup', 'minutes': 10},
             ],
         },
